@@ -1,2 +1,1 @@
-r4um.github.io
-==============
+Blog. Theme based on [Thinkspace](https://github.com/heiswayi/thinkspace).
