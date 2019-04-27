@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-systems guy • curious and intrusive • 99.999% positive
+❯ systems guy • curious and intrusive • 99.999% positive
 
-[email](mailto:pranay.kanwar@gmail.com) • [linkedin](https://www.linkedin.com/in/pranay-kanwar/)
+❯ [email](mailto:pranay.kanwar@gmail.com) • [linkedin](https://www.linkedin.com/in/pranay-kanwar/)
 
 
