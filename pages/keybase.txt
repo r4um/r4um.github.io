@@ -1,0 +1,71 @@
+---
+permalink: /keybase.txt
+---
+==================================================================
+https://keybase.io/r4um
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blog.r4um.net
+  * I am r4um (https://keybase.io/r4um) on keybase.
+  * I have a public key with fingerprint 9D5A DEF2 1144 2374 61C6  35C0 E44E BF3F B4B1 E122
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01017d94472a3f8bdaaaca52309398c2d4654bc393512d6cda95529d96aa164466830a",
+      "fingerprint": "9d5adef21144237461c635c0e44ebf3fb4b1e122",
+      "host": "keybase.io",
+      "key_id": "e44ebf3fb4b1e122",
+      "kid": "01017d94472a3f8bdaaaca52309398c2d4654bc393512d6cda95529d96aa164466830a",
+      "uid": "485197bcc7f72f3b239e8ade61d27500",
+      "username": "r4um"
+    },
+    "service": {
+      "hostname": "blog.r4um.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1556351579,
+  "expire_in": 157680000,
+  "prev": "f48a5a29af4f3fd62cb969dbf54fe5edc165dbe09fee194a6a6b55fe5e5a6376",
+  "seqno": 29,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMIkAnicrVJbSFRRFB21hw4Z9pEmacKl6CXOfZxz7pyh/EgTP/JLCixh5px7ztWb
+473TzJ0pDYke9KKsIKOgEIlELEoxwrB8hGhSIJJlYdBHEIVBFEVQ9DhX6q/Pzs/m
+7L3W2nsv9mh2hs+fVjYxR8bKl11MezTSlvTVjvp37Zeow5qk0H6pgc8HHmU84YYb
+LCaFJFmRFZ1hAHSVaGaQMkKIQaCqyVjDQUNlAEFADQ1rUFEZMhjBEKqYYUSIggBA
+KKjJRCqWTMuu4/FY3LJdIYsZJIybqqIAoGo6QIqBNGjIHABOTc2kgCpcUVVBrHcS
+HkMMR0mCl1iOyIlPeH68f+D/89zJeTkQhArWqWHopq6aGlU1zINiA6QwVYey7AET
+PG6TRi7QcZBslFqKJZFJWQb3TPW2+FOlUaeuxIOU2NwVxFjccR3DiYpSvevGEiGP
+6jbFPOxeTsN/VMLUspkwUTBSPJ6wHFsKKQJpuJYnq0AoHFSgjoslvi9mxXnY8hBQ
+R0FZPK8PTwlJEwQJJComJhDGMaQaFCPMqAmBySFnhoIgo1zGJucKBgQRRCH0SpAg
+TUeSt9ce25FCqmjlkjqhmbDqbOIm41xqeTBcu8CX5vctWpjuXZfPn5Xz9+Y+5S/+
+taciOgYLIzNPSqV3Dwc2rH3e1+WfmFlZGEweDn/vnM4YL4hIR/mv0Zr6mvVncy6M
+TnV/rJntOPPj/WTq54Hboc3jbs7x6LUrr6vduUuvjJuteGtvb0Pkzbn8dS03usJD
+PbEV+WH5bvfSnsnZVTPDeSeqnJ9FvRmnUvRZf/PL9sOT6/LcQGfZl9KA/bb1Q+Xm
+NYND7e37yN7Br5Gu1mjmct7ZcdXJ/rBtLjctfUdF2f3TWeXfeoeswYJDBW39mZ8K
+N7T1fVTxyJLqAEpUN/UcDO0uyh2+Xnm6igTu1ZxsuJP+NpB1JJp8+rhq+vPA9lr5
+2OrIprzzWy5vvLUM73zR3Dz1G7gFPUI=
+=eKs0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/r4um
+
+==================================================================
