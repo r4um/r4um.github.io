@@ -2,7 +2,7 @@
 title_left    : "❯❯ "
 title_right   : "strings < /proc/self/fd/1" # default: ""
 description   : "r4um's blog."
-keywords      : "blog, web, minimalist, thinkspace, systems, linux, unix, networking "
+keywords      : "blog, web, minimalist, thinkspace, systems, linux, unix, networking, r4um, pranay, pranay kanwar"
 url           : https://blog.r4um.net # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "https://avatars1.githubusercontent.com/u/629631?s=460&v=4" # image uri like logo/cover image for site seo
