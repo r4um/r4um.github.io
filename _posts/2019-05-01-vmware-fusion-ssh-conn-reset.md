@@ -20,7 +20,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-Turning on verbose logging and checking its not a auth related issue.
+Turning on verbose logging and checking its not an auth related issue.
 
 ```
 $ ssh -vv git@github.com
@@ -34,7 +34,7 @@ client_loop: send disconnect: Broken pipe
 
 Auth succeeds, oddly rest of the  linux virtual machines (ubuntu etc.) don't have this issue.
 
-We should see whats happening on the wire. To make debugging easier
+We should see what's happening on the wire. To make debugging easier
 we will make connection attempts to just one of hosts under github.com,  `192.30.253.113`. Capturing packets inside the VM.
 
 ```
@@ -81,7 +81,7 @@ Capturing on 'ens33'
    38 2.334102359 172.16.27.131 → 192.30.253.113 TCP 54 57964 → 22 [RST] Seq=2642 Win=0 Len=0
 ```
 
-From capture above seems like github host is reseting the connection after sending packet no. `35`, reset at packet no. `36`. Since this virtual machine's network is [NAT'd](https://kb.vmware.com/s/article/1022264)
+From capture above seems like GitHub host is resetting the connection after sending packet no. `35`, reset at packet no. `36`. Since this virtual machine's network is [NAT'd](https://kb.vmware.com/s/article/1022264)
 we should capture the interaction from outside the VM, capturing on the host
 
 ```
@@ -113,7 +113,7 @@ listening on en0, link-type EN10MB (Ethernet), capture size 262144 bytes
  00:00:00.000100  pktflags 0x4 IP 192.168.86.161.64245 > 192.30.253.113.22: Flags [.], ack 2139, win 2048, options [nop,nop,TS val 1381900364 ecr 4163052839], length 0
 ```
 
-The capture confirms, it is in fact the `vmware-natd` process responsible for this interaction.
+The capture confirms it's the `vmware-natd` process responsible for this interaction.
 
 Going back to our first packet capture from inside the virtual machine host, it is odd
 that packet no. `32` goes through fine but packet no. `35` (both are `SSHv2 Client` packets) somehow irks `vmware-natd` to close connection and send a reset. 
@@ -254,7 +254,7 @@ $ python ip_ds_48.py
 b'HTTP/1.1 301 Moved Permanently\r\nContent-length: 0\r\nLocation: https:///\r\nConnection: close\r\n\r\n'
 ```
 
-We got a response, no resets. Perhaps its switching of the field in between that's causing it ? Changing script to set TOS after connect
+We got a response, no resets. Perhaps it is the change of the TOS value in between that is causing it? Changing the script to set TOS after connect.
 
 ```python
 import socket
@@ -278,11 +278,11 @@ Traceback (most recent call last):
 ConnectionResetError: [Errno 104] Connection reset by peer
 ```
 
-Connection reset, confirmed. 
+Connection reset confirmed. 
 
-We can see `ip.dsfield.dscp` field is set to `18`, going through the [wikipedia page](https://en.wikipedia.org/wiki/Differentiated_services#Commonly_used_DSCP_values) ssh is setting [Assured Forwarding](https://en.wikipedia.org/wiki/Differentiated_services#Assured_Forwarding) `AF21` DSCP value. Going through change log and commit 
+We can see `ip.dsfield.dscp` field is set to `18`, going through the [wikipedia page](https://en.wikipedia.org/wiki/Differentiated_services#Commonly_used_DSCP_values) ssh is setting [Assured Forwarding](https://en.wikipedia.org/wiki/Differentiated_services#Assured_Forwarding) `AF21` DSCP value. Going through changelog and commit 
 history it was done with [this change](https://github.com/openssh/openssh-portable/commit/5ee8448ad7c306f05a9f56769f95336a8269f379) starting with version 7.8p1. This VM
-has version 8.0p1, rest of the VMs have older version of openssh hence don't see this problem.
+has version 8.0p1, rest of the VMs have an older version of openssh hence don't see this problem.
 
 Going through the [ssh_config](https://man.openbsd.org/ssh_config#IPQoS) man page, this can be controlled via the `IPQoS` option. Setting it to `lowdelay` for example, things work fine.
 
@@ -296,4 +296,4 @@ Connection to 192.30.253.113 closed.
 Follow up interesting exercises
 
 *  Reverse engineer `vmware-natd` to see why it does that, patch to turn off this behaviour.
-*  Why doesn't tcpdump on linux have a `-k` like option, what would it take to add it ?
+*  Why doesn't tcpdump on linux have a `-k` like option, what would it take to add it?
