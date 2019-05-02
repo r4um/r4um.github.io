@@ -201,7 +201,7 @@ $ diff -U1 32 35
 +            "tcp.time_delta": "0.000154310"
            },
 -          "tcp.payload": "be:55:58:b7:eb:f9:36:d3:6a:4a:33:d6:f3:79:db:cc:45:88:29:88:4e:07:68:9c:b2:7c:8a:49:85:74:fa:34:f2:f8:5e:ee:b8:07:15:77:13:10:aa:be:b0:3c:ae:1e:4b:5a:e7:5b"
-+          "tcp.payload": "d6:6a:97:0a:32:82:75:94:37:bd:25:09:1a:9c:0c:fd:fb:4a:23:0b:72:a1:af:f7:46:6d:03:e6:a4:de:e9:5a:43:aa:85:26:48:25:a1:ef:01:d2:e4:22:55:d8:ca:e6:2b:ee:7a:74:19:f9:84:e9:68:8b:b9:74:d6:f5:46:fc:0f:5c:0f:e0:bc:70:59:3b:04:9f:62:be:93:41:e1:a4:22:e0:2f:3f:ce:2e:ee:79:b1:0d:8b:14:0a:83:bd:cd:15:86:71:75:dc:f8:bf:d9:81:61:75:41:27:90:80:9d:a0:85:77:83:f9:0f:37:29:7e:64:8f:80:46:63:ff:6e:f2:b8:67:91:6a:e6:c2:74:74:72:f5:b0:10:0d:8c:73:9a:f4:67:bc:e4:b8:d9:8e:48:d3:79:90:e2:d0:38:ad:26:5c:9c:42:60:3c:0c:4a:e6:5a:37:11:62:9e:30:3a:f1:57:3a:10:87:52:09:34:a2:6b:89:75:f1:aa:40:c3:27:b0:8b:e4:94:f4:0e:a4:fe:4f:db:b8:89:ca:ce:15:70:d2:e2:07:b7:66:1a:ba:68:31:8a:a1:2d:93:d5:54:3f:7b:0e:2e:6a:16:7d:fe:ef:d1:8d:3f:c7:d7:6c:71:17:d8:30:3e:86:67:d9:b8:2a:a1:20:c5:ae:1e:16:2f:ca:fe:8d:4c:5d:c7:81:f5:07:c6:8e:6a:bb:c9:ff:4f:e9:98:28:90:81:2e:c5:4f:f0:77:5a:bb:67:27:ad:ca:fd:a9:ef:17:81:36:12:b7:81:46:ee:2f:22:9a:f9:11:b2:3e:cf:b6:bb:0a:f4:d6:8a:53:2b:6f:aa:63:cb:50:fa:fa:e8:6b:63:6e:c1:0d:0d:a3:09:b3:eb:1e:0a:ae:91:a5:d2:50:b8:ac:13:79:b7:9f:73:c8:8d:91:e2:5b:1b:f1:a6:52:7d:bb:d7:1b:18:20:b0:98:d3:6d:91:f9:42:ba:b1:f4:67:89:24:42:25:5d:94:8b:40:59:07:cc:c8:e6:bb:ac:9d:04:de:0a"
++          "tcp.payload": "d6:6a:97:0a:32:82:75:94:37:bd:25:09:1a:9c:0c:fd:fb:4a:23:0b:72:a1:af:f7:46:6d:03:e6:a4:de:e9:5a:43:aa:85:26:48:25:a1:ef:01:d2:e4:22:55:d8:ca:e6:;:04:9f:62:be:93:41:e1:a4:22:e0:2f:3f:ce:2e:ee:79:b1:0d:8b:14:0a:83:bd:cd:15:86:71:75:dc:f8:bf:d9:81:61:75:41:27:90:80:9d:a0:85:77:83:f9:0f:37:29:7e:64:8f:80:46:63:ff:6e:f2:b8:67:91:6a:e6:c2:74:74:72:f5:b0:10:0d:8c:73:9a:f4:67:bc:e4:b8:d9:8e:48:d3:79:90:e2:d0:38:ad:26:5c:9c:42:60:3c:0c:4a:e6:5a:37:11:62:9e:30:3a:f1:57:3a:10:87:52:09:34:a2:6b:89:75:f1:aa:40:c3:27:b0:8b:e4:94:f4:0e:a4:fe:4f:db:b8:89:ca:ce:15:70:d2:e2:07:b7:66:1a:ba:68:31:8a:a1:2d:93:d5:54:3f:7b:0e:2e:6a:16:7d:fe:ef:d1:8d:3f:c7:d7:6c:71:17:d8:30:3e:86:67:d9:b8:2a:a1:20:c5:ae:1e:16:2f:ca:fe:8d:4c:5d:c7:81:f5:07:c6:8e:6a:bb:c9:ff:4f:e9:98:28:90:81:2e:c5:4f:f0:77:5a:bb:67:27:ad:ca:fd:a9:ef:17:81:36:12:b7:81:46:ee:2f:22:9a:f9:11:b2:3e:cf:b6:bb:0a:f4:d6:8a:53:2b:6f:aa:63:cb:50:fa:fa:e8:6b:63:6e:c1:0d:0d:a3:09:b3:eb:1e:0a:ae:91:a5:d2:50:b8:ac:13:79:b7:9f:73:c8:8d:91:e2:5b:1b:f1:a6:52:7d:bb:d7:1b:18:20:b0:98:d3:6d:91:f9:42:ba:b1:f4:67:89:24:42:25:5d:94:8b:40:59:07:cc:c8:e6:bb:ac:9d:04:de:0a"
          },
 @@ -121,5 +121,5 @@
            "SSH Version 2 (encryption:chacha20-poly1305@openssh.com mac:<implicit> compression:none)": {
@@ -254,7 +254,7 @@ $ python ip_ds_48.py
 b'HTTP/1.1 301 Moved Permanently\r\nContent-length: 0\r\nLocation: https:///\r\nConnection: close\r\n\r\n'
 ```
 
-We got a response, no resets. Perhaps its switching of the feild in between that's causing it ? Changing script to set TOS after connect
+We got a response, no resets. Perhaps its switching of the field in between that's causing it ? Changing script to set TOS after connect
 
 ```python
 import socket
@@ -293,7 +293,7 @@ Hi r4um! You've successfully authenticated, but GitHub does not provide shell ac
 Connection to 192.30.253.113 closed.
 ```
 
-Follow up interesting excercises
+Follow up interesting exercises
 
 *  Reverse engineer `vmware-natd` to see why it does that, patch to turn off this behaviour.
 *  Why doesn't tcpdump on linux have a `-k` like option, what would it take to add it ?
