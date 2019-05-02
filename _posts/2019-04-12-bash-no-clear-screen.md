@@ -6,9 +6,9 @@ description: "bash: no clear"
 keywords: "bash, readline, termcap, gdb, linux"
 ---
 
-Switched a linuxbrew installation from source based to bottled one (got tired of source builds failing most of the time). Installed bash bottle and switched to it as shell, everything works fine except pressing `CTRL-l` doesn't clear screen anymore, looks like it's just sending a newline. How is it something so trivial that has always worked stopped working ?
+Switched a linuxbrew installation from the source based to bottled one (got tired of source builds failing most of the time). Installed bash bottle and switched to it as shell, everything works fine except pressing `CTRL-l` doesn't clear screen anymore, looks like it's just sending a newline. How is it something so trivial that has always worked stopped working?
 
-Next making sure the `CTRL-l` key is actually bound to clear screen.
+Next to make sure the `CTRL-l` key is actually bound to clear screen.
 
 ```shell
 $ bind -P | grep clear
@@ -101,7 +101,7 @@ which has no line number information.
 $2 = -1
 ```
 
-As confirmed `tgetent` is returing `-1` [[^1]], this function is part of inbuilt [termcap](https://github.com/bminor/bash/blob/d233b485e83c3a784b803fb894280773f16f2deb/lib/termcap/termcap.c#L1) functionality in bash.
+As confirmed `tgetent` is returning `-1` [[^1]], this function is part of inbuilt [termcap](https://github.com/bminor/bash/blob/d233b485e83c3a784b803fb894280773f16f2deb/lib/termcap/termcap.c#L1) functionality in bash.
 
 Reading through the [tgetent](https://github.com/bminor/bash/blob/d233b485e83c3a784b803fb894280773f16f2deb/lib/termcap/termcap.c#L451:1) function it is [looking for](https://github.com/bminor/bash/blob/d233b485e83c3a784b803fb894280773f16f2deb/lib/termcap/termcap.c#L526) [/etc/termcap](https://github.com/bminor/bash/blob/d233b485e83c3a784b803fb894280773f16f2deb/lib/termcap/termcap.c#L106:9). Confirming via gdb
 
@@ -146,4 +146,4 @@ Moving this to `/etc/termcap` (or point the [TERMCAP](https://github.com/bminor/
 ___
 Footnote:
 
-[^1]: 1: If you are wondering on usage of `rdi` and `eax` registers, these conventions are part of the [ABI](https://en.wikipedia.org/wiki/Application_binary_interface) on [x86](https://github.molgen.mpg.de/git-mirror/glibc/blob/glibc-2.15/sysdeps/unix/sysv/linux/x86_64/syscall.S#L32). Return code from function calls is stored in `eax`.
+[^1]: 1: If you are wondering on the usage of `rdi` and `eax` registers, these conventions are part of the [ABI](https://en.wikipedia.org/wiki/Application_binary_interface) on [x86](https://github.molgen.mpg.de/git-mirror/glibc/blob/glibc-2.15/sysdeps/unix/sysv/linux/x86_64/syscall.S#L32). Return code from function calls is stored in `eax`.
