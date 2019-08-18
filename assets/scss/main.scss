@@ -4,5 +4,8 @@
 @import "variables";
 @import "base/base";
 
+$fa-font-path: "fonts/font-awesome/";
+@import 'font-awesome';
+
 @import "layout";
 @import "syntax-highlighting";
