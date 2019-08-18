@@ -107,7 +107,7 @@ hr {
 }
 
 .navbar {
-  float: right;
+  float: left;
   margin: 0;
   position: relative;
   padding: 0;
@@ -116,7 +116,7 @@ hr {
 
   li {
     display: inline-block;
-    padding: 0 .6em;
+    padding: 0 .3em;
   }
 
   a {
@@ -224,6 +224,7 @@ hr {
 
   a {
     @extend .link;
+    color: $action-color;
   }
 
   small {
