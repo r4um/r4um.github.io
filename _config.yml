@@ -29,6 +29,9 @@ sass:
 # Author settings
 author:
   name     : "Pranay Kanwar"
+  github   : "r4um"
+  linkedin : "pranay-kanwar"
+  keybase  : "r4um"
 
 plugins:
   - jekyll-sitemap
@@ -38,8 +41,6 @@ plugins:
 
 # navbar pages
 navbar:
-  - slug : about
-    title: About
   - slug : blog
     title: Blog
 

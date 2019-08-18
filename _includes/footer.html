@@ -1,5 +1,11 @@
 <footer class="site-footer">
   <div class="container">
-    <small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} </small>
+    <ul class="navbar">
+        <li><a class="fab fa-github post-link" href="https://github.com/{{site.author.github}}" title="GitHub" target="_blank"></a></li>
+        <li><a class="fab fa-linkedin-in" href="https://www.linkedin.com/in/{{site.author.linkedin}}" title="LinkedIn" target="_blank"></a></li>
+        <li><a class="fab fa-keybase" href="https://keybase.io/{{site.author.keybase}}" title="Keybase" target="_blank"></a></li>
+        <li><a class="fas fa-key" href="https://keybase.io/r4um/pgp_keys.asc?fingerprint=9d5adef21144237461c635c0e44ebf3fb4b1e122" title="pgp" target="_blank"></a></li>
+        <li><a class="fa fa-rss" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank"></a></li>
+    </ul>
   </div>
 </footer>
