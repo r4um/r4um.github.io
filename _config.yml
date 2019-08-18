@@ -15,7 +15,11 @@ postshare_enabled : false
 
 # Build settings
 permalink   : /:year/:title/
+
 markdown    : kramdown
+kramdown:
+  input: GFM
+
 highlighter : rouge
 
 source      : ./
@@ -38,6 +42,7 @@ plugins:
   - bourbon
   - jekyll-paginate
   - jekyll-font-awesome-sass
+  - font-awesome-sass
 
 # navbar pages
 navbar:
