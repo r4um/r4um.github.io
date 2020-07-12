@@ -3,6 +3,7 @@ _site/
 .bundle/
 Gemfile.lock
 *.gem
+.jekyll-cache
 
 # Windows image file caches
 Thumbs.db
