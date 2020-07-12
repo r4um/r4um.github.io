@@ -1,6 +1,7 @@
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
-$base-font-family: 'Overpass Mono', monospace;
+@import url('/assets/fonts/recursive/RecursiveSansLnrSt-Regular.woff2');
+@import url('/assets/fonts/recursive/RecursiveMonoLnrSt-Regular.woff2');
+$base-font-family: 'Recursive', monospace;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
