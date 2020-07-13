@@ -82,6 +82,7 @@ blockquote {
   line-height: 1.8;
   border-left: $small-spacing solid $light-gray-color;
   background-color: lighten($light-gray-color, 15%);
+  font-variation-settings: "MONO" 1, "CASL" 0, "wght" 400, "slnt" 0, "CRSV" 0.5;
   p {
     margin: 0;
   }
