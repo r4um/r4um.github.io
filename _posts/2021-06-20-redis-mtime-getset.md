@@ -19,9 +19,41 @@ in terms of latency.
 We can store the last modification time of a key in a [hash](https://redis.io/topics/data-types#hashes) and retrieve
 the value only if it is newer than the time requestor sent. 
 
-The following python code has Lua snippets that store/retrieve based on the modification time of key in a hash called `MY_KEYSTIME`. 
+The following Lua snippets store/retrieve based on the modification time of key in a hash called `MY_KEYSTIME`. 
+
+Get based on modification time
+
+```lua
+local keys_mtime_hset = "MY_KEYSMTIME"
+local key = KEYS[1]
+local mtime = tonumber(ARGV[1])
+
+local key_mtime = redis.call('HGET', keys_mtime_hset, key)
+key_mtime = tonumber(key_mtime)
+-- if missing key in the hash set return the value of the key.
+-- or key mtime > mtime 
+if not key_mtime or key_mtime > mtime then
+    return redis.call('GET', key)
+end
+
+return nil 
+```
+
+Set and update modification time
+
+```lua
+local keys_mtime_hset = "MY_KEYSMTIME"
+local key = KEYS[1]
+local value = ARGV[1]
+local mtime = tonumber(ARGV[2])
+
+redis.call('SET', key, value)
+redis.call('HSET', keys_mtime_hset, key, mtime)
+```
+
 Client passes the modification time while retrieving and setting the key. Redis Lua scripts are [atomic](https://redis.io/commands/eval#atomicity-of-scripts).
- 
+
+The following python code illustrates a full working example.
 
 ```python
 mtime_get="""
