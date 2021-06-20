@@ -31,7 +31,6 @@ local mtime = tonumber(ARGV[1])
 
 local key_mtime = redis.call('HGET', keys_mtime_hset, key)
 key_mtime = tonumber(key_mtime)
-
 -- if missing key in the hash set return the value of the key.
 -- or key mtime > mtime 
 if not key_mtime or key_mtime > mtime then
@@ -46,6 +45,7 @@ local keys_mtime_hset = "MY_KEYSMTIME"
 local key = KEYS[1]
 local value = ARGV[1]
 local mtime = tonumber(ARGV[2])
+
 redis.call('SET', key, value)
 redis.call('HSET', keys_mtime_hset, key, mtime)
 """
