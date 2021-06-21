@@ -50,7 +50,7 @@ redis.call('SET', key, value)
 redis.call('HSET', keys_mtime_hset, key, mtime)
 ```
 
-Client passes the modification time while retrieving and setting the key. Redis Lua scripts are [atomic](https://redis.io/commands/eval#atomicity-of-scripts).
+Client sends the modification time while retrieving and setting the key. Redis Lua scripts are [atomic](https://redis.io/commands/eval#atomicity-of-scripts).
 
 The following python code illustrates a full working example.
 
@@ -133,4 +133,4 @@ Running and plotting the timings from this benchmark, x axis is time taken for c
 ![redis_mtget_timings](/assets/images/redis_mtime_getset_output_4_0.png)
 
 As expected there is a slight overhead, with plain get being the fastest and modification time based get the slowest.
-See this [jupyter notebook](https://github.com/r4um/jupyter-notebooks/blob/main/redis_mtime_getset.ipynb) for full working example and diagram source.
+See this [jupyter notebook](https://github.com/r4um/jupyter-notebooks/blob/main/redis_mtime_getset.ipynb) for full working example and chart source.
