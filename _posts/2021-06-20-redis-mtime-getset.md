@@ -6,18 +6,17 @@ description: "redis server side if-modified-since pattern using lua"
 keywords: "redis, jupyter, python, cache, caching"
 ---
 
-The [if modified since](https://datatracker.ietf.org/doc/html/rfc7232#section-3.3) kid of pattern for retrieving data from cache can save
+The [if modified since](https://datatracker.ietf.org/doc/html/rfc7232#section-3.3) type of pattern for retrieving data from cache can save
 significant network bandwidth and compute cycles. 
 
-The data modification time reference should be from the requestor side and be sent as part of the request and not assumed on server side based on a non 
-acknowledgement type of method like simply last time the requestor connected to the server. 
+The data modification time reference should be from the client side and be sent as part of the request and not assumed on server side based on a non 
+acknowledgement type of method like simply last time the client connected to the server. 
 
-
-It is possible to do this kind of pattern completely on redis server side leveraging [lua](https://redis.io/commands/eval) on [redis](https://redis.io), with very less overhead
+This kind of pattern is possible on redis server side leveraging [lua](https://redis.io/commands/eval) on [redis](https://redis.io), with very less overhead
 in terms of latency.
 
 We can store the last modification time of a key in a [hash](https://redis.io/topics/data-types#hashes) and retrieve
-the value only if it is newer than the time requestor sent. 
+the value only if it is newer than the time client sent. 
 
 The following Lua snippets store/retrieve based on the modification time of key in a hash called `MY_KEYSTIME`. 
 
@@ -129,9 +128,9 @@ g = timeit.Timer("MTGET(keys=[t_k], args=[m1 + 100])",globals=globals())
 timings_miss_mtget = g.repeat(repeat=REPEAT, number=NUMBER)
 ```
 
-Running and plotting the timings from this benchmark, x axis is times from the timeit calls.
+Running and plotting the timings from this benchmark, x axis is time taken for calls.
 
 ![redis_mtget_timings](/assets/images/redis_mtime_getset_output_4_0.png)
 
-As expected there is a slight overhead, with plain get being the fastest and a modification time based gets the slowest.
+As expected there is a slight overhead, with plain get being the fastest and modification time based get the slowest.
 See this [jupyter notebook](https://github.com/r4um/jupyter-notebooks/blob/main/redis_mtime_getset.ipynb) for full working example and diagram source.
