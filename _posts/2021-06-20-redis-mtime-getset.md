@@ -134,3 +134,5 @@ Running and plotting the timings from this benchmark, x axis is time taken for c
 
 As expected there is a slight overhead, with plain get being the fastest and modification time based get the slowest.
 See this [jupyter notebook](https://github.com/r4um/jupyter-notebooks/blob/main/redis_mtime_getset.ipynb) for full working example and chart source.
+
+[HN Dicussion](https://news.ycombinator.com/item?id=27588671).
