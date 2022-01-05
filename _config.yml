@@ -32,10 +32,11 @@ sass:
 
 # Author settings
 author:
-  name     : "Pranay Kanwar"
-  github   : "r4um"
-  linkedin : "pranay-kanwar"
-  keybase  : "r4um"
+  name      : "Pranay Kanwar"
+  github    : "r4um"
+  linkedin  : "pranay-kanwar"
+  keybase   : "r4um"
+  instagram : "_umib0zu_"
 
 plugins:
   - jekyll-sitemap
